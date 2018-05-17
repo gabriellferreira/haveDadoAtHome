@@ -1,10 +1,19 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/news_swipe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Xablau"
+        android:textSize="50sp"
+        android:textColor="@color/fake_black"/>
 
     <TextView
         android:id="@+id/numero_sorteado"
@@ -15,12 +24,10 @@
         tools:text="17"
         android:background="@drawable/background_circular"/>
 
-
     <Button
         android:id="@+id/botao_sortear"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/numero_sorteado"
         android:text="Sortear"/>
 
-</RelativeLayout>
+</LinearLayout>
