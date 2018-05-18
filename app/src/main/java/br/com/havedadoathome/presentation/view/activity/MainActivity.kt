@@ -1,5 +1,6 @@
 package br.com.havedadoathome.presentation.view.activity
 
+import br.com.havedadoathome.R
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -13,8 +14,8 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-
 
 class MainActivity : BaseActivity<MainContract.Presenter, MainContract.View>(),
         MainContract.View {
@@ -112,7 +113,6 @@ class MainActivity : BaseActivity<MainContract.Presenter, MainContract.View>(),
         val alert = AlertDialog.Builder(this)
         alert.setTitle("Qual é o seu nome?")
         val input = EditText(this)
-        input.inputType = InputType.TYPE_CLASS_NUMBER
         alert.setView(input)
         alert.setPositiveButton("Xablau") { _, _ ->
             userName = input.text.toString()
